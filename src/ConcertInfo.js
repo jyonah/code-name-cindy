@@ -3,6 +3,11 @@ import {GracefulImage} from "./GracefulImage";
 
 
 export function ConcertInfo(concertInfo) {
+    function formatDate(timestamp) {
+        const date = new Date(timestamp);
+        const options = { weekday: 'long', month: 'long', day: 'numeric' };
+        return date.toLocaleDateString('en-US', options);
+    }
 
     return(
         <div>
