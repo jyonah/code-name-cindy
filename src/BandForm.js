@@ -1,14 +1,12 @@
 function BandForm({ band }) {
+  const { ticketTypes, ...concertInfoProps } = band
+
   return (
-    <div>
-      <h1>{band.name}</h1>
-      {band.ticketTypes.map((ticket) => (
-        <p>
-          {ticket.name} - {ticket.description}
-        </p>
-      ))}
-    </div>
-  );
+      <div>
+        <ConcertInfo ConcertInfo= {...concertInfoProps} />
+        <TicketsForm ticketTypes=ticketTypes />
+      </div>
+  )
 }
 
 export default BandForm;
