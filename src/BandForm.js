@@ -1,3 +1,6 @@
+import * as PropTypes from "prop-types";
+import {ConcertInfo} from "./ConcertInfo";
+
 function BandForm({ band }) {
   const { ticketTypes, ...concertInfoProps } = band
 
