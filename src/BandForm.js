@@ -9,6 +9,7 @@ import {ConcertHeader} from "./ConcertHeader";
 import {TicketsPicker} from "./TicketsPicker";
 import {TicketsTotal} from "./TicketsTotal";
 import {BuyerInfo} from "./BuyerInfo";
+import {PaymentDetails} from "./PaymentDetails";
 
 
 function BandForm({ band }) {
@@ -35,7 +36,7 @@ function BandForm({ band }) {
               <TicketsPicker ticketTypes={band.ticketTypes}/>
               <TicketsTotal/>
               <BuyerInfo/>
-              {/*<PaymentDetails/>*/}
+              <PaymentDetails/>
               {/*<Button/> /!*  Get Ticekts  *!/*/}
           </TicketsForm>
       </div>
