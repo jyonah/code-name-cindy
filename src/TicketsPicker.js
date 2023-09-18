@@ -1,5 +1,23 @@
+import {useBandFormContext} from "./BandFormContext";
+
 export function TicketsPicker({ticketTypes}) {
-    console.log("TicketsPicker Loaded")
+    const {formData, setFormData} = useBandFormContext()
+
+    function handleChange(e) {
+        const {name, value} = e.target
+        const cost = e.target.dataset.cost
+
+        setFormData(prevState => ({
+            ...prevState,
+            tickets: {
+                ...prevState.tickets,
+                [name]: {
+                    count: value,
+                    cost: cost * value
+                }
+            }
+        }))
+    }
 
     const ticketSelections = ticketTypes.map((type) => {
         return(
@@ -10,12 +28,20 @@ export function TicketsPicker({ticketTypes}) {
                     <p className='ticket-price'>${type.cost/100}</p>
                 </div>
                 <div>
-                    <input type='number' min='0'/>
+                    <input
+                        type='number'
+                        name={type.type}
+                        value={formData.tickets[type.type]?.count ?? ''}
+                        placeholder='0'
+                        min='0'
+                        data-cost={type.cost}
+                        onChange={handleChange}
+                    />
                 </div>
             </div>
         )
     })
-    console.log(ticketSelections)
+
     return(
         <form>
             <h2>Select Tickets</h2>
