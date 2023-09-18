@@ -14,12 +14,12 @@ export function GracefulImage({src, alt, width, height}) {
             width={width}
             height={height}
             onError={handleError}
-            style={{ display: 'block', width, height, lineHeight}}
+            style={{ display: 'block', width, height}}
         />
     )
 }
 
-GracefullImage.propTypes = {
+GracefulImage.propTypes = {
     src: PropTypes.string,
     alt: PropTypes.string,
     width: PropTypes.string,
