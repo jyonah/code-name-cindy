@@ -1,4 +1,4 @@
-import {useBandFormContext} from "./BandFormContext";
+import {useBandFormContext} from "../BandFormContext";
 import {useState} from "react";
 
 export function SubmitButton() {

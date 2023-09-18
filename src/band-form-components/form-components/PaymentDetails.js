@@ -1,4 +1,4 @@
-import {useBandFormContext} from "./BandFormContext";
+import {useBandFormContext} from "../BandFormContext";
 import {set} from "react-hook-form";
 
 export function PaymentDetails() {

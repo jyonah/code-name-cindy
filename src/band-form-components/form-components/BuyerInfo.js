@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {useBandFormContext} from "./BandFormContext";
+import {useBandFormContext} from "../BandFormContext";
 
 export function BuyerInfo() {
     const {formData, setFormData} = useBandFormContext()

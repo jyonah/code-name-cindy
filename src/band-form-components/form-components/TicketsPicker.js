@@ -1,4 +1,4 @@
-import {useBandFormContext} from "./BandFormContext";
+import {useBandFormContext} from "../BandFormContext";
 
 export function TicketsPicker({ticketTypes}) {
     const {formData, setFormData} = useBandFormContext()
