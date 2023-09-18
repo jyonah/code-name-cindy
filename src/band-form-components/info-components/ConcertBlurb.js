@@ -11,7 +11,7 @@ export function ConcertBlurb({blurb}) {
     return (
         <div>
             <div
-                className='paragraph'
+                className='concert-blurb'
                 dangerouslySetInnerHTML={htmlBlurb}
             />
         </div>

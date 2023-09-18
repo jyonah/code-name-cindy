@@ -47,25 +47,27 @@ function BandForm({ band }) {
                     <ConcertDate date={band.date}/>
                     <ConcertLocation location={band.location}/>
                 </ConcertHeader>
-                <ConcertInfo >
-                    <GracefulImage
-                        src={`${band.imgUrl}`}
-                        alt={`${band.name} members posed in a group shot, each standing two feet from each other at a two thirds angle, glowering at the camera, arms crossed.`}
-                        // An example of alt text, though in an ideal environment,
-                        // I would advocate for alt text being kept as a property
-                        // associated with the image.
-                        height="200"
-                        width="300"
-                    />
-                    <ConcertBlurb blurb={band.description_blurb} />
-                </ConcertInfo>
-                <TicketsForm>
-                    <TicketsPicker ticketTypes={band.ticketTypes}/>
-                    <TicketsTotal totalCost={totalCost}/>
-                    <BuyerInfo/>
-                    <PaymentDetails/>
-                    <SubmitButton/>
-                </TicketsForm>
+                <div className='flex-columns'>
+                    <ConcertInfo >
+                        <GracefulImage
+                            src={`${band.imgUrl}`}
+                            alt={`${band.name} members posed in a group shot, each standing two feet from each other at a two thirds angle, glowering at the camera, arms crossed.`}
+                            // An example of alt text, though in an ideal environment,
+                            // I would advocate for alt text being kept as a property
+                            // associated with the image.
+                            height="200"
+                            width="300"
+                        />
+                        <ConcertBlurb blurb={band.description_blurb} />
+                    </ConcertInfo>
+                    <TicketsForm>
+                        <TicketsPicker ticketTypes={band.ticketTypes}/>
+                        <TicketsTotal totalCost={totalCost}/>
+                        <BuyerInfo/>
+                        <PaymentDetails/>
+                        <SubmitButton/>
+                    </TicketsForm>
+                </div>
             </div>
         </BandFormContext.Provider>
 )}
