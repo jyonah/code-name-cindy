@@ -10,6 +10,7 @@ import {TicketsPicker} from "./TicketsPicker";
 import {TicketsTotal} from "./TicketsTotal";
 import {BuyerInfo} from "./BuyerInfo";
 import {PaymentDetails} from "./PaymentDetails";
+import {SubmitButton} from "./SubmitButton";
 
 import {BandFormContext} from "./BandFormContext";
 import {useEffect, useState} from "react";
@@ -63,7 +64,7 @@ function BandForm({ band }) {
                     <TicketsTotal totalCost={totalCost}/>
                     <BuyerInfo/>
                     <PaymentDetails/>
-                    {/*<Button/> /!*  Get Ticekts  *!/*/}
+                    <SubmitButton/>
                 </TicketsForm>
             </div>
         </BandFormContext.Provider>
