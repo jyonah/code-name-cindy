@@ -6,11 +6,10 @@ import {ConcertDate} from "./ConcertDate";
 import {ConcertLocation} from "./ConcertLocation";
 import {ConcertBlurb} from "./ConcertBlurb";
 import {ConcertHeader} from "./ConcertHeader";
+import {TicketsPicker} from "./TicketsPicker";
 
 
 function BandForm({ band }) {
-
-    console.log("description", band.description_blurb)
   return (
       <div>
           <ConcertHeader>
@@ -30,7 +29,13 @@ function BandForm({ band }) {
             />
             <ConcertBlurb blurb={band.description_blurb} />
           </ConcertInfo>
-          <TicketsForm />
+          <TicketsForm>
+              <TicketsPicker ticketTypes={band.ticketTypes}/>
+              {/*<TicketsTotal/>*/}
+              {/*<BuyerInfo/>*/}
+              {/*<PaymentDetails/>*/}
+              {/*<Button/> /!*  Get Ticekts  *!/*/}
+          </TicketsForm>
       </div>
   )
 }
