@@ -55,8 +55,8 @@ function BandForm({ band }) {
                             // An example of alt text, though in an ideal environment,
                             // I would advocate for alt text being kept as a property
                             // associated with the image.
-                            height="200"
-                            width="300"
+                            height="250"
+                            width="350"
                         />
                         <ConcertBlurb blurb={band.description_blurb} />
                     </ConcertInfo>

@@ -11,10 +11,10 @@
 }
 
 .App h1 {
-    font-size: 2em;
+    font-size: 1.5em;
     color: #333;
-    margin-bottom: 20px;
-    font-weight: lighter;
+    margin-bottom: 5px;
+    /*font-weight: lighter;*/
 }
 
 .App h2 {
@@ -27,7 +27,8 @@
 .App h3 {
     font-size: 1.2em;
     color: #666666;
-    margin-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 10px;
     font-weight: lighter;
 }
 
@@ -38,14 +39,15 @@
     max-width: 600px;
 }
 
-.App button {
+.App .tickets-form button {
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #606060;
     color: #fff;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 30px;
+    width: 100%;
 }
 
 .App button:hover {
@@ -53,16 +55,20 @@
 }
 
 .concert-header {
-    width: 100%
+    padding-left: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.concert-header p {
+    font-size: .85em;
+    margin: 0 0 0 15px;
 }
 
 .flex-columns {
     display: flex; ;
 }
 
-.concert-header{
-    padding-left: 20px;
-}
 .concert-info, .tickets-form {
     padding-left: 20px;
     padding-right: 20px;
@@ -72,12 +78,84 @@
     max-width: 350px;
 }
 
-.concert-blurb {
-}
-
 .tickets-form{
     background: #f7f8fa;
     flex-grow: 5;
     max-width: 450px;
 }
 
+.ticket-picker {
+    border-bottom: 1px solid #d2d2d4;
+    margin-bottom: 20px;
+}
+
+.ticket-picker h3 {
+    width: 100%;
+}
+
+.ticket-columns {
+    display: flex;
+    /*align-items: center;*/
+}
+
+.ticket-columns p {
+    margin: 0;
+}
+
+p.ticket-price {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.num-container {
+    flex-grow: 1;
+}
+
+.num-tickets {
+    height: 30px;
+    width: 55px;
+    text-align: center;
+    margin-left: 50px;
+
+
+    padding: 0;
+    line-height: 50px;
+}
+
+input[type=number] {
+    -webkit-appearance: textfield; /* For Safari */
+    -moz-appearance: textfield;    /* For Firefox */
+    appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+.flex-total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-total h2 {
+    font-weight: lighter;
+}
+
+.slight-bold {
+    font-weight: normal;
+    color: #333333;
+}
+
+.form-section div {
+    display: flex;
+    gap: 10px;
+}
+
+.form-section div input{
+    flex-grow: 1;
+    height: 30px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}

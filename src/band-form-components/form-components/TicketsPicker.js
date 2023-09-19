@@ -22,21 +22,25 @@ export function TicketsPicker({ticketTypes}) {
     const ticketSelections = ticketTypes.map((type) => {
         return(
             <div key={`${type.type}-picker`} className='ticket-picker'>
-                <div>
-                    <h3 className='heading-light'>{type.name}</h3>
-                    <p className='ticket-description'>{type.description}</p>
-                    <p className='ticket-price'>${type.cost/100}</p>
-                </div>
-                <div>
-                    <input
-                        type='number'
-                        name={type.type}
-                        value={formData.tickets[type.type]?.count ?? ''}
-                        placeholder='0'
-                        min='0'
-                        data-cost={type.cost}
-                        onChange={handleChange}
-                    />
+
+                <div className='ticket-columns'>
+                    <div>
+                        <h3 className='heading-light'>{type.name}</h3>
+                        <p className='ticket-description'>{type.description}</p>
+                        <p className='ticket-price'>${type.cost/100}</p>
+                    </div>
+                    <div className='num-container'>
+                        <input
+                            type='number'
+                            className='num-tickets'
+                            name={type.type}
+                            value={formData.tickets[type.type]?.count ?? ''}
+                            placeholder='0'
+                            min='0'
+                            data-cost={type.cost}
+                            onChange={handleChange}
+                        />
+                    </div>
                 </div>
             </div>
         )
