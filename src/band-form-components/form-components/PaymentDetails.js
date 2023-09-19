@@ -17,7 +17,7 @@ export function PaymentDetails() {
     }
     return(
         <div className='form-section'>
-            <h3>Payment Details</h3>
+            <h4 className='payment-details'>Payment Details</h4>
             <div>
                 <input
                     type='tel'

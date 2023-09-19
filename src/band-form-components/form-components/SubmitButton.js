@@ -27,8 +27,8 @@ export function SubmitButton() {
     }
 
     return(
-        <div>
-            {error && <div className='error-message'>{error}</div>  }
+        <div className='submit-container'>
+            <div className='error-message'>{error}</div>
             <button onClick={handleSubmit}>Get Tickets</button>
         </div>
     )

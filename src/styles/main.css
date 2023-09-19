@@ -46,7 +46,6 @@
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 30px;
     width: 100%;
 }
 
@@ -148,6 +147,10 @@ input[type=number]::-webkit-outer-spin-button {
     color: #333333;
 }
 
+h4.payment-details {
+    font-weight: bold;
+    margin: 5px 0px 5px;
+}
 .form-section div {
     display: flex;
     gap: 10px;
@@ -158,4 +161,10 @@ input[type=number]::-webkit-outer-spin-button {
     height: 30px;
     margin-bottom: 10px;
     padding-left: 10px;
+}
+
+.error-message{
+    margin: 0px;
+    color: red;
+    height: 30px;
 }
