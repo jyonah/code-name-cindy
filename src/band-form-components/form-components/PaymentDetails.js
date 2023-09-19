@@ -15,6 +15,10 @@ export function PaymentDetails() {
             }
         }))
     }
+
+    // The state update in handle change here is nearly identical to how state and handle change are updated in
+    // 'BuyerInfo', presenting a refactoring opportunity if I were to work on this further.
+
     return(
         <div className='form-section'>
             <h4 className='payment-details'>Payment Details</h4>
@@ -53,6 +57,10 @@ export function PaymentDetails() {
                     onChange={handleChange}
                     required
                 />
+
+            {/*    I've put this kind of comment everywhere else, and while it's starting to feel a bit silly imma
+                    stick to what I started - this would, of course, not be sufficient for any sort of production
+                    environment, and implementing stripe here would be necessary. */}
             </div>
         </div>
     );

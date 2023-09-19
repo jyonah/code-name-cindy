@@ -16,6 +16,9 @@ export function BuyerInfo() {
         }))
     }
 
+    // The state update in handle change here is nearly identical to how state and handle change are updated in
+    // 'payment details', presenting a refactoring opportunity if I were to work on this further.
+
     return (
         <div className='form-section'>
             <div>
@@ -48,6 +51,8 @@ export function BuyerInfo() {
                     onChange={handleChange}
                     required
                 />
+            {/*  The address field here is a simple text input, though ideally it would be an autocomplete field
+                  with a maps/places data lookup */}
             </div>
         </div>
     );

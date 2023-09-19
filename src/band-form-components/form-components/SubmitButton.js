@@ -25,6 +25,10 @@ export function SubmitButton() {
             setError("Buying zero tickets does nothing for anybody 😜")
         }
     }
+    // I included only one validation here, for the purposes of this exercise, but further validations & associated
+    // error messages would include the form not being empty, address, CC, date, and CVV formatting being correct, as
+    // well as any validations associated with payment - though I'm sure a lot of this would be handled out of the box
+    // by the stripe implementations.
 
     return(
         <div className='submit-container'>

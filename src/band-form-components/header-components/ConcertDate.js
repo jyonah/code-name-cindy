@@ -11,4 +11,7 @@ export function ConcertDate({date}) {
     return <p className="date">{formatDate(date)}</p>;
 }
 
+// I elected to save time by not implementing icons for date & location, but my likely implementation
+// would involve a font-awesome subset: https://blog.fontawesome.com/introducing-subsetting-in-fa-kits/
+
 ConcertDate.propTypes = {date: PropTypes.number};

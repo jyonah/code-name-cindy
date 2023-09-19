@@ -19,6 +19,9 @@ export function TicketsPicker({ticketTypes}) {
         }))
     }
 
+    // When incrementing ticket count up and then down again the state management above leaves the vestigial structure
+    // for removed tickets. While inconsequential in the current context, an opportunity for optimization exists.
+
     const ticketSelections = ticketTypes.map((type) => {
         return(
             <div key={`${type.type}-picker`} className='ticket-picker'>
@@ -45,6 +48,10 @@ export function TicketsPicker({ticketTypes}) {
             </div>
         )
     })
+
+    // I selected a number input to match the provided mockup, but the number input type is falling/has fallen out of
+    // favor, due to increased complexity, improved usability with other inputs, and a relatively higher discrepancy in
+    // implementation across chrome, firefox, safari, and other popular browsers.
 
     return(
         <form>
